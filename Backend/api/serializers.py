@@ -75,3 +75,36 @@ class MemberRegisterSerializer(MemberSerializer):
         model = Member
         fields = ['id', 'user', 'user_id', 'first_name', 'last_name', 'phone']
 
+
+class DoctorCommentSerializer(serializers.ModelSerializer):
+    doctor = DoctorSerializer(read_only=True)
+    doctor_id = serializers.PrimaryKeyRelatedField(queryset=Doctor.objects.all(), required=False, source='doctor')
+    member = MemberSerializer(read_only=True)
+    member_id = serializers.PrimaryKeyRelatedField(queryset=Member.objects.all(), required=False, source='member')
+
+    class Meta:
+        model = DoctorComment
+        fields = ['id','doctor', 'doctor_id', 'member', 'member_id', 'content']
+
+
+class DoctorVisitSerializer(serializers.ModelSerializer):
+    doctor = DoctorSerializer(read_only=True)
+    doctor_id = serializers.PrimaryKeyRelatedField(queryset=Doctor.objects.all(), required=False, source='doctor')
+    member = MemberSerializer(read_only=True)
+    member_id = serializers.PrimaryKeyRelatedField(queryset=Member.objects.all(), required=False, source='member')
+
+    class Meta:
+        model = DoctorVisit
+        fields = ['id','doctor', 'doctor_id', 'member', 'member_id', 'datetime']
+
+class DoctorFavSerializer(serializers.ModelSerializer):
+    doctor = DoctorSerializer(read_only=True)
+    doctor_id = serializers.PrimaryKeyRelatedField(queryset=Doctor.objects.all(), required=False, source='doctor')
+    member = MemberSerializer(read_only=True)
+    member_id = serializers.PrimaryKeyRelatedField(queryset=Member.objects.all(), required=False, source='member')
+
+    class Meta:
+        model = DoctorFav
+        fields = ['id','doctor', 'doctor_id', 'member', 'member_id']
+
+

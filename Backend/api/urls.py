@@ -17,3 +17,15 @@ router.register(r'doctor-favs', DoctorFavViewSet)
 
 urlpatterns = router.urls
 
+#User
+urlpatterns += [
+    path('auth/login/', MemberLoginView.as_view()),
+    path('auth/register/', MemberRegisterView.as_view()),
+    path('member/profile/', MemberProfileViewSet.as_view({'get': 'retrieve', 'put': 'update'})),
+]
+
+#Admin
+urlpatterns += [
+    # path('admin/users/<int:pk>/update_password/', AdminChangeUserPasswordView.as_view() ),
+]
+
