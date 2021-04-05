@@ -72,4 +72,27 @@ class Member(models.Model):
 	
 	def __str__(self):
 		return self.get_full_name()
+        
+        class DoctorComment(models.Model):
+	doctor = models.ForeignKey("main.Doctor", on_delete=models.CASCADE, related_name='comments')
+	member = models.ForeignKey("main.Member", on_delete=models.CASCADE, related_name='doctor_comments')
+	content = models.TextField()
+
+	def __str__(self):
+		return self.content
+
+	class Meta:
+		ordering = ['-id']
+
+class DoctorVisit(models.Model):
+	doctor = models.ForeignKey("main.Doctor", on_delete=models.CASCADE, related_name='visits')
+	member = models.ForeignKey("main.Member", on_delete=models.CASCADE, related_name='visits')
+	datetime = models.DateTimeField()
+
+	def __str__(self):
+		return self.datetime.strftime("%Y-%m-%dT%H:%M:%S")
+
+class DoctorFav(models.Model):
+	doctor = models.ForeignKey("main.Doctor", on_delete=models.CASCADE, related_name='+')
+	member = models.ForeignKey("main.Member", on_delete=models.CASCADE, related_name='doctor_favs')
 
