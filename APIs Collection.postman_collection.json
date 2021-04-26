@@ -1,0 +1,482 @@
+{
+	"info": {
+		"_postman_id": "936c44a7-f2ea-42a9-a2e2-393683c731c3",
+		"name": "APIs Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "Get All Doctors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctors/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctors",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Got a Doctor by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctors/1/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctors",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Doctor Comment by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctors/1/comments/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctors",
+								"1",
+								"comments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Doctors Favorites ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctor-favs/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctor-favs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Doctor Visit by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctors/1/visit_times/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctors",
+								"1",
+								"visit_times",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Doctor Favorite by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctor-favs/1/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctor-favs",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Doctors Comments ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctor-comments/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctor-comments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Doctor Comment by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctor-comments/1/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctor-comments",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Doctors Visits ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctor-visits/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctor-visits",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Doctor Visit by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctor-visits/1/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctor-visits",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Member Profiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/member/profile/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"member",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/cities/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"cities",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cities by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/cities/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"cities",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "Update Favorite Doctor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctor-comments/1/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctor-comments",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Doctor Comment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctor-comments/1/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctor-comments",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Doctor Visit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctor-visits/1/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctor-visits",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Member Profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/member/profile/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"member",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update City",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/cities/1/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"cities",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Add Doctor to Favorites",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctor-favs/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctor-favs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Comment to a Doctor ",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctor-comments/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctor-comments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Visit to a Doctor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/doctor-visits/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"doctor-visits",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a New City",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/cities/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"cities",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8000"
+		}
+	]
+}
